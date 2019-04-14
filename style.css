@@ -16,6 +16,7 @@
   body {
       text-align: center;
       width: 100%;
+      font-family: 'Quicksand';
   }
 
 header {
@@ -81,7 +82,7 @@ nav {
 }
 
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 762px) {
 	header {
 		position: fixed;
     }
@@ -103,7 +104,7 @@ nav {
 		right: 0px;
 		top: 50px;
         width: 35%;
-        height: 150px;
+        height: 180px;
         padding-top: 10px;
         padding-left: 20px;
         text-align: left;
@@ -274,8 +275,25 @@ nav {
     z-index: 1;
     
 }
+.btn2 {
+    border: 2px solid white;
+    border-radius: 15px;
+    background: none;
+    padding: 10px 40px;
 
-.btn:hover, .btn1:hover{
+    font-family: 'Quicksand';
+    font-size: 1.8em;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    z-index: 1;
+    position: relative;
+    margin-top: 5px;
+}
+
+.btn:hover, .btn1:hover, .btn2:hover{
     color: #fff;
     border: #fff;
 }
@@ -301,6 +319,11 @@ nav {
   transition: .5s;
 }
 
+
+.btn2::before {
+    color: #fff;
+}
+
 .btn1::before {
     top: 0;
     border-radius: 0 0 50% 50%;
@@ -317,6 +340,8 @@ nav {
 .btn:hover::before{
     height: 180%;
 }
+
+
 
 .para1 p {
     font-family: 'Quicksand';
@@ -409,5 +434,66 @@ nav {
     margin: 0;
     padding-right: 5px;
     font-family: 'Quicksand';
+    text-align: right;
 }
 
+.main-container {
+    /* background: linear-gradient(53.65562125652116deg, rgba(0, 9, 107,1) 4.529948906091692%,rgba(0, 9, 107,1) 39.829220293503035%,rgba(158, 0, 236,1) 93.86425880192502%); */
+    height: 100hv;
+    background: #040926;
+    width: 100%;
+    position: absolute;
+}
+
+.contact-title {
+    transition: all 4s ease-in-out;
+}
+
+.contact-title h1  {
+    padding-top: 10%;
+    font-size: 3em;
+    color: white;
+}
+.contact-title h2 {
+    font-size: .8em;
+    margin-bottom: -1%;
+}
+
+.contact-title h3 {
+    color: white;
+    margin-bottom: 11%;
+
+}
+form {
+    margin-top: 10px;
+    transition: all 4s ease-in-out;
+}
+
+.form-control{
+    width: 60%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color:#fff;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+
+form .submit {
+    background: #251351;
+    font-size: 20px;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 150px;
+    border-color: transparent;
+
+}
+
+form .submit:hover {
+    background-color: #fff;
+    cursor: pointer;
+    color: #251351;
+}
