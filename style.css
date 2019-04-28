@@ -142,7 +142,7 @@ nav {
 
  
 }
-.hero .opacity {
+.hero .opacity, .about-hero .opacity2 {
     background-color: rgba(0, 0, 0, 0.5);
     height: 100%;
     position: absolute;
@@ -155,7 +155,7 @@ nav {
     color: white;
     width: 100%;
     position: relative;
-    top: 35%;
+    top: 10%;
     /* left: -10%; */
     font-size: 240%;
     letter-spacing: .1em;
@@ -163,11 +163,17 @@ nav {
 
 }
 
-.sub-heading {
+.inner-container h1 {
+    margin-bottom: 10px
+}
+
+.sub-heading h3 {
     font-family: 'Quicksand';
+    font-size: 18px;
     color: #fff;
     position: relative;
     top: 35%;
+
 }
 .container {
     
@@ -197,14 +203,17 @@ nav {
 
 .services ul {
    margin-top: 75px;
-   margin-bottom: 75px;
+   margin-bottom: 0px;
    padding-left: 0;
+   font-size: 25px;
+   list-style-type: none;
+    
+   
 }
 
 
-.services ul li p {
-    font-family: 'Quicksand';
-    font-size: 25px;
+.services ul li {
+  list-style: none;
     
 }
 
@@ -212,9 +221,7 @@ nav {
     height: 120px; 
 }
 
-.services ul li:nth-child(1) {
-    margin-bottom: 50px;
-}
+
 
 .image1 {
     background: url(images/curls-w-1600x900.jpg);
@@ -282,7 +289,7 @@ nav {
     padding: 10px 40px;
 
     font-family: 'Quicksand';
-    font-size: 1.8em;
+    font-size: 20px;
     cursor: pointer;
     transition: 0.8s;
     position: relative;
@@ -290,7 +297,7 @@ nav {
     color: white;
     z-index: 1;
     position: relative;
-    margin-top: 5px;
+    margin-top: 50px;
 }
 
 .btn:hover, .btn1:hover, .btn2:hover{
@@ -496,4 +503,57 @@ form .submit:hover {
     background-color: #fff;
     cursor: pointer;
     color: #251351;
+}
+
+
+/* About page CSS */
+
+
+.about-hero {
+
+    background-image: url(images/rope-1600x600.jpg);
+    background-repeat: no-repeat;
+    height:600px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    top: 60px;
+
+}
+
+
+.about1 {
+
+    position: relative;
+    top: 38px;
+    font-size: 1.8em;
+    letter-spacing: .2em;
+}
+
+.content p {
+
+    margin: 30px;
+    padding: 100px 20px 40px 20px;
+}
+
+.hero-nutrition {
+    background-image: url(images/salad-1600x700.jpg)
+}
+
+@media only screen and (min-width:543px) {
+    .inner-container {
+        top: 30%;
+}
+
+
+@media only screen and (min-width:680px) {
+    .services ul{
+        display:flex;
+        justify-content: center;
+    }
+
+    .services ul li:nth-child(1) {
+        margin-bottom: 50px;
+        padding-right: 18%;
+    }
 }
