@@ -142,21 +142,26 @@ nav {
 
  
 }
-.hero .opacity, .about-hero .opacity2 {
+.hero .opacity, .about-hero .opacity2{
     background-color: rgba(0, 0, 0, 0.5);
     height: 100%;
     position: absolute;
     width: 100%;
   }
+  .hero-nutrition .opacity {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 86%;
+    position: absolute;
+    width: 100%;
+  }
   
 
-.inner-container {
+.inner-container, .hero-nutrition .inner-container h1  {
     
     color: white;
     width: 100%;
     position: relative;
     top: 10%;
-    /* left: -10%; */
     font-size: 240%;
     letter-spacing: .1em;
     font-family: 'Iceland', 'Archivo Black', sans-serif;
@@ -299,6 +304,7 @@ nav {
     position: relative;
     margin-top: 50px;
 }
+
 
 .btn:hover, .btn1:hover, .btn2:hover{
     color: #fff;
@@ -536,15 +542,19 @@ form .submit:hover {
     padding: 100px 20px 40px 20px;
 }
 
-.hero-nutrition {
-    background-image: url(images/salad-1600x700.jpg)
-}
+
+
+
+/* Media queries for home page */
+
 
 @media only screen and (min-width:543px) {
     .inner-container {
         top: 30%;
 }
 
+
+}
 
 @media only screen and (min-width:680px) {
     .services ul{
@@ -557,3 +567,54 @@ form .submit:hover {
         padding-right: 18%;
     }
 }
+
+
+/* NUTRITION PAGE */
+
+
+.hero-nutrition {
+    background-image: url(images/salad-1600x700.jpg);
+    height: 600px;
+    background-position: center;
+    font-size: 90%;
+}
+.up {
+    grid-area: u;
+    justify-self: center;
+    align-self: center;
+ }
+ 
+ .wl{
+     grid-area: wl;
+     align-self: center;
+ }
+ 
+ .kg {
+     grid-area: k;
+     justify-self: center;
+     width: 120px;
+ }
+ 
+ .mg {
+     grid-area: mg;
+     align-self: center;
+ }
+ .down {
+     grid-area: d;
+     justify-self: center;
+     align-self: center;
+ }
+.programs {
+    display: grid;
+    font-size: 2em;
+    padding: 5% 10%;
+    align-self: center;
+    grid-template-columns: 240px 1fr 240px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "u . wl"
+    ". k ."
+    "mg . d";
+}
+
+
